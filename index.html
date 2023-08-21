@@ -186,13 +186,13 @@
                         <h3 class="text-black text-2xl font-medium pt-6 pb-4">Have coupon?</h3>
                         <div class="flex items-center pb-6">
                             <input class="bg-white rounded-sm border border-solid border-black px-1" type="text" name=""
-                                id="" placeholder="Coupon code">
-                            <button id="btn-apply" class="text-white text-center text-sm font-semibold rounded-sm bg-slate-400 px-5 py-1" >Apply</button>
+                                id="coupon-field" placeholder="Coupon code">
+                            <button id="btn-apply" onclick="cuponCode(this)" disabled class="text-white text-center text-sm font-semibold rounded-sm bg-[#E527B2] px-5 py-1">Apply</button>
                         </div>
                     </div>
                     <div class="border rounded-lg shadow-md bg-white px-4 mt-6">
                         <div id="selected-items" class="text-black text-lg font-medium leading-10">
-                            <ol id="selected-items" class="list-decimal">
+                            <ol id="selected-items">
                                 
                             </ol>
                         </div>
@@ -204,7 +204,7 @@
                         <p class="text-black text-2xl font-medium leading-10 pb-6">Total: <span id="total"
                                 class="text-gray-400"> 00</span></p>
                         <hr class="pb-6">
-                        <button id="btn-purchase" onclick="" class="text-white text-center text-sm font-semibold rounded-lg bg-slate-400 px-[90px] py-4">Make
+                        <button id="btn-purchase" onclick="" disabled class="text-white text-center text-sm font-semibold rounded-lg bg-[#E527B2] px-[90px] py-4">Make
                             Purchase</button>
                             <dialog class="modal" id="my_modal_1">
                                 <div class="modal-box bg-[white]">

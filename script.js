@@ -17,9 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-
-
 let total = 0;
 
 function handleClick(target) {
@@ -35,17 +32,78 @@ function handleClick(target) {
     const totalPriceField = (document.getElementById('total-price').innerText = total);
 }
 
-const btnPurchase = document.getElementById('btn-purchase').addEventListener('click', () => {
+
+
+
+
+
+
+
+/*const btnPurchase = document.getElementById('btn-purchase')
+const btnApply = document.getElementById('btn-apply')
+
+
+const btnDisable =()=> {
+    if(parseFloat(totalPrice.innerHTML) < 200){
+        btnApply.ariaDisabled= true
+        btnApply.style.backgroundColor="gray"
+        btnApply.style.borderColor="gray"
+    }
+    if(parseFloat(totalPrice.innerHTML) >= 200){
+        btnApply.ariaDisabled= false
+        btnApply.style.backgroundColor="#E527B2"
+        btnApply.style.borderColor="#E527B2"
+    }
+    if(parseFloat(totalPrice.innerHTML) == 0){
+        btnPurchase.disabled= true
+        btnPurchase.style.backgroundColor="gray"
+    }
+    if(parseFloat(totalPrice.innerHTML) > 0){
+        btnPurchase.disabled= false
+        btnPurchase.style.backgroundColor="#E527B2"
+    }
+}*/
+
+if (total > 0) {
+    const btnPurchase = document.getElementById('btn-purchase');
+
+    btnPurchase.disabled = false;
+    btnPurchase.style.backgroundColor = '#E527B2';
+}
+
+if (total >= 200) {
+    const btnApply = document.getElementById('btn-apply');
+
+    btnApply.disabled = false;
+    btnApply.style.backgroundColor = '#E527B2';
+}
+
+
+
+function cuponCode(data) {
+    const couponField = document.getElementById('coupon-field')
+    if (couponField.value === 'SELL200') {
+        const totalValue = document.getElementById('total-price')
+        const priceValueString = totalValue.innerText;
+        const priceValue = parseFloat(priceValueString);
+        const discountValue = (parseFloat(priceValue / 100)) * 20;
+        const discount = priceValue - discountValue;
+
+
+        const discountTotal = (document.getElementById('discount').innerText = discountValue.toFixed(2));
+
+        const priceTotal = (document.getElementById('total').innerText = discount.toFixed(2));
+
+    }
+    else {
+        alert('Invalid cupon code.')
+    }
+}
+
+
+const btnPurchase1 = document.getElementById('btn-purchase').addEventListener('click', () => {
     my_modal_1.showModal()
 });
 const btnHome = document.getElementById('btn-home').addEventListener('click', () => {
     window.location.reload()
 });
-
-//btnPurchase.addEventListener('click', () => {
-   /// my_modal_1.showModal()
-//});
-
-//btnPurchase.addEventListener('click',()=>{
-   // my_modal_1.showModal()
-//})
