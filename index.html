@@ -11,19 +11,19 @@
 
 <body class="">
     <header class="bg-[#F9F6E2]">
-        <div class="flex flex-cols-1 md:flex-cols-2 text-center">
-            <div class="text-black py-[240px] pl-[240px]">
+        <div class="flex flex-col md:flex-col-reverse lg:flex-row text-center items-center">
+            <div class="text-black py-2 md:py-4 lg:py-[240px] pl-2 md:pl-4 lg:pl-[240px]">
                 <p class="text-3xl font-medium">---SALE FEVER---</p>
-                <h3 class="text-5xl font-bold pt-11">Purchase TK 200 or <br> above & get <span
+                <h3 class="text-5xl font-bold pt-4 md:pt-6 lg:pt-11">Purchase TK 200 or <br> above & get <span
                         class="text-[#E527B2]">20% off</span></h3>
-                <div class="flex items-center pt-16">
-                    <p class="text-2xl font-medium pr-4 pl-[50px]">Use Promo Code</p>
+                <div class="flex items-center pt-8 lg:pt-16 pr-2">
+                    <p class="text-2xl font-medium pr-1 lg:pr-4 pl-[50px]">Use Promo Code</p>
                     <button id="btn-copy"
                         class="bg-[#E527B2] rounded-lg w-40 h-14 text-white text-2xl font-semibold">SELL200</button>
                 </div>
             </div>
             <div>
-                <img class="pl-72" src="images/Summer 1.png" alt="">
+                <img class="pl-0 lg:pl-72" src="images/Summer 1.png" alt="">
             </div>
         </div>
     </header>
@@ -187,7 +187,7 @@
                         <div class="flex items-center pb-6">
                             <input class="bg-white rounded-sm border border-solid border-black px-1" type="text" name=""
                                 id="coupon-field" placeholder="Coupon code">
-                            <button id="btn-apply" onclick="cuponCode(this)" disabled class="text-white text-center text-sm font-semibold rounded-sm bg-[#E527B2] px-5 py-1">Apply</button>
+                            <button id="btn-apply" onclick="cuponCode(this)" disabled class="text-white text-center text-sm font-semibold rounded-sm bg-slate-400 px-5 py-1">Apply</button>
                         </div>
                     </div>
                     <div class="border rounded-lg shadow-md bg-white px-4 mt-6">
@@ -204,7 +204,7 @@
                         <p class="text-black text-2xl font-medium leading-10 pb-6">Total: <span id="total"
                                 class="text-gray-400"> 00</span></p>
                         <hr class="pb-6">
-                        <button id="btn-purchase" onclick="" disabled class="text-white text-center text-sm font-semibold rounded-lg bg-[#E527B2] px-[90px] py-4">Make
+                        <button id="btn-purchase" disabled class="text-white text-center text-sm font-semibold rounded-lg bg-slate-400 px-[90px] py-4">Make
                             Purchase</button>
                             <dialog class="modal" id="my_modal_1">
                                 <div class="modal-box bg-[white]">

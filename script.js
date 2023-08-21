@@ -27,55 +27,26 @@ function handleClick(target) {
     selectedItemsField.appendChild(ol);
 
     const price = target.childNodes[7].innerText.split(' ')[0];
-    total = parseFloat(total) + parseFloat(price) + ' TK'
+    total = parseFloat(total) + parseFloat(price); 
 
     const totalPriceField = (document.getElementById('total-price').innerText = total);
-}
 
 
 
-
-
-
-
-
-/*const btnPurchase = document.getElementById('btn-purchase')
-const btnApply = document.getElementById('btn-apply')
-
-
-const btnDisable =()=> {
-    if(parseFloat(totalPrice.innerHTML) < 200){
-        btnApply.ariaDisabled= true
-        btnApply.style.backgroundColor="gray"
-        btnApply.style.borderColor="gray"
-    }
-    if(parseFloat(totalPrice.innerHTML) >= 200){
-        btnApply.ariaDisabled= false
-        btnApply.style.backgroundColor="#E527B2"
-        btnApply.style.borderColor="#E527B2"
-    }
-    if(parseFloat(totalPrice.innerHTML) == 0){
-        btnPurchase.disabled= true
-        btnPurchase.style.backgroundColor="gray"
-    }
-    if(parseFloat(totalPrice.innerHTML) > 0){
-        btnPurchase.disabled= false
-        btnPurchase.style.backgroundColor="#E527B2"
-    }
-}*/
+const btnPurchase = document.getElementById('btn-purchase');
 
 if (total > 0) {
-    const btnPurchase = document.getElementById('btn-purchase');
-
     btnPurchase.disabled = false;
-    btnPurchase.style.backgroundColor = '#E527B2';
+    btnPurchase.style.backgroundColor = '#E527B2'
 }
 
-if (total >= 200) {
-    const btnApply = document.getElementById('btn-apply');
 
+const btnApply = document.getElementById('btn-apply');
+
+if (total >= 200) {
     btnApply.disabled = false;
-    btnApply.style.backgroundColor = '#E527B2';
+    btnApply.style.backgroundColor = '#E527B2'
+}
 }
 
 
@@ -99,6 +70,7 @@ function cuponCode(data) {
         alert('Invalid cupon code.')
     }
 }
+
 
 
 const btnPurchase1 = document.getElementById('btn-purchase').addEventListener('click', () => {
