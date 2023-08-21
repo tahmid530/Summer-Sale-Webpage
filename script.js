@@ -34,15 +34,12 @@ function handleClick(target) {
 
 
 const btnPurchase = document.getElementById('btn-purchase');
-
 if (total > 0) {
     btnPurchase.disabled = false;
     btnPurchase.style.backgroundColor = '#E527B2'
 }
 
-
 const btnApply = document.getElementById('btn-apply');
-
 if (total >= 200) {
     btnApply.disabled = false;
     btnApply.style.backgroundColor = '#E527B2'
@@ -64,14 +61,11 @@ function cuponCode(data) {
         const discountTotal = (document.getElementById('discount').innerText = discountValue.toFixed(2));
 
         const priceTotal = (document.getElementById('total').innerText = discount.toFixed(2));
-
     }
     else {
         alert('Invalid cupon code.')
     }
 }
-
-
 
 const btnPurchase1 = document.getElementById('btn-purchase').addEventListener('click', () => {
     my_modal_1.showModal()

@@ -11,7 +11,7 @@
 
 <body class="">
     <header class="bg-[#F9F6E2]">
-        <div class="flex flex-col md:flex-col-reverse lg:flex-row text-center items-center">
+        <div class="flex flex-col-reverse md:flex-col-reverse lg:flex-row text-center items-center">
             <div class="text-black py-2 md:py-4 lg:py-[240px] pl-2 md:pl-4 lg:pl-[240px]">
                 <p class="text-3xl font-medium">---SALE FEVER---</p>
                 <h3 class="text-5xl font-bold pt-4 md:pt-6 lg:pt-11">Purchase TK 200 or <br> above & get <span
@@ -32,9 +32,9 @@
             <h1 class="text-black text-4xl font-bold pt-32 pb-8">
                 Kitchenware
             </h1>
-            <div class="flex">
+            <div class="flex flex-col md:flex-col lg:flex-row">
                 <div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-1 lg:gap-6 ml-5 md:ml-0 lg:ml-0">
                         <!-- card-1 -->
                         <div id="card-1" class="card w-96 bg-base shadow-2xl">
                             <div>
@@ -110,7 +110,7 @@
                     </h1>
 
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-1 lg:gap-6 ml-5 md:ml-0 lg:ml-0">
 
                         <!-- card-4 -->
                         <div id="card-4" class="card w-96 bg-base shadow-2xl">
@@ -181,8 +181,8 @@
 
                     </div>
                 </div>
-                <div class="pl-6">
-                    <div class="border rounded-lg shadow-md bg-white px-4">
+                <div class="pl-6 pb-10">
+                    <div class="border rounded-lg shadow-md bg-white px-4 mt-4 lg:mb-6 mr-6 lg:mr-0">
                         <h3 class="text-black text-2xl font-medium pt-6 pb-4">Have coupon?</h3>
                         <div class="flex items-center pb-6">
                             <input class="bg-white rounded-sm border border-solid border-black px-1" type="text" name=""
@@ -190,7 +190,7 @@
                             <button id="btn-apply" onclick="cuponCode(this)" disabled class="text-white text-center text-sm font-semibold rounded-sm bg-slate-400 px-5 py-1">Apply</button>
                         </div>
                     </div>
-                    <div class="border rounded-lg shadow-md bg-white px-4 mt-6">
+                    <div class="border rounded-lg shadow-md bg-white px-4 mt-4 lg:mt-0 mr-6 lg:mr-0">
                         <div id="selected-items" class="text-black text-lg font-medium leading-10">
                             <ol id="selected-items">
                                 
@@ -198,13 +198,13 @@
                         </div>
                         <hr>
                         <p class="text-black text-2xl font-medium leading-10">Total price: <span id="total-price"
-                                class="text-gray-400"> 00</span></p>
+                                class="text-gray-400"> 00</span> <span class="text-gray-400">TK</span></p>
                         <p class="text-black text-2xl font-medium leading-10">Discount: <span id="discount"
-                                class="text-gray-400"> 00</span></p>
-                        <p class="text-black text-2xl font-medium leading-10 pb-6">Total: <span id="total"
-                                class="text-gray-400"> 00</span></p>
+                                class="text-gray-400"> 00</span> <span class="text-gray-400">TK</span></p>
+                        <p class="text-black text-2xl font-medium leading-10">Total: <span id="total"
+                                class="text-gray-400"> 00</span> <span class="text-gray-400">TK</span></p>
                         <hr class="pb-6">
-                        <button id="btn-purchase" disabled class="text-white text-center text-sm font-semibold rounded-lg bg-slate-400 px-[90px] py-4">Make
+                        <button id="btn-purchase" disabled class="text-white text-center text-sm font-semibold rounded-lg bg-slate-400 px-[90px] py-4 mx-8 lg:mx-0">Make
                             Purchase</button>
                             <dialog class="modal" id="my_modal_1">
                                 <div class="modal-box bg-[white]">
