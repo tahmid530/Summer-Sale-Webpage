@@ -22,28 +22,28 @@ let total = 0;
 function handleClick(target) {
     const selectedItemsField = document.getElementById('selected-items');
     const cardName = target.childNodes[5].innerText;
-    const ol = document.createElement('ol');
-    ol.innerText = cardName;
-    selectedItemsField.appendChild(ol);
+    const li = document.createElement('li');
+    li.innerText = cardName;
+    selectedItemsField.appendChild(li);
 
     const price = target.childNodes[7].innerText.split(' ')[0];
-    total = parseFloat(total) + parseFloat(price); 
+    total = parseFloat(total) + parseFloat(price);
 
     const totalPriceField = (document.getElementById('total-price').innerText = total);
 
 
 
-const btnPurchase = document.getElementById('btn-purchase');
-if (total > 0) {
-    btnPurchase.disabled = false;
-    btnPurchase.style.backgroundColor = '#E527B2'
-}
+    const btnPurchase = document.getElementById('btn-purchase');
+    if (total > 0) {
+        btnPurchase.disabled = false;
+        btnPurchase.style.backgroundColor = '#E527B2'
+    }
 
-const btnApply = document.getElementById('btn-apply');
-if (total >= 200) {
-    btnApply.disabled = false;
-    btnApply.style.backgroundColor = '#E527B2'
-}
+    const btnApply = document.getElementById('btn-apply');
+    if (total >= 200) {
+        btnApply.disabled = false;
+        btnApply.style.backgroundColor = '#E527B2'
+    }
 }
 
 
@@ -53,12 +53,12 @@ function cuponCode(data) {
     if (couponField.value === 'SELL200') {
         const totalValue = document.getElementById('total-price')
         const priceValueString = totalValue.innerText;
-        const priceValue = parseFloat(priceValueString);
-        const discountValue = (parseFloat(priceValue / 100)) * 20;
-        const discount = priceValue - discountValue;
+        const priceAmmount = parseFloat(priceValueString);
+        const discountAmmount = (parseFloat(priceAmmount / 100)) * 20;
+        const discount = priceAmmount - discountAmmount;
 
 
-        const discountTotal = (document.getElementById('discount').innerText = discountValue.toFixed(2));
+        const discountTotal = (document.getElementById('discount').innerText = discountAmmount.toFixed(2));
 
         const priceTotal = (document.getElementById('total').innerText = discount.toFixed(2));
     }
